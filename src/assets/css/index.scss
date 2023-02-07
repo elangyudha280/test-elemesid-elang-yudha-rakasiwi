@@ -2,6 +2,24 @@
 
 
 $font:'Rubik', sans-serif;
+$sky-blue:rgba(64, 162, 177, 1);
+$very-soft-green:rgba(164, 180, 65, 1);
+
+$soft:(
+    'green':rgba(139, 172, 62, 1),
+    'blue':rgba(64, 94, 182, 1),
+    'pink':rgba(178, 63, 116, 1),
+);
+
+$alpha:(
+    'green':rgba(240, 254, 235, 1),
+    'sky-blue':rgba(230, 243, 245, 1),
+    'blue':rgba(234, 238, 250, 1),
+    'orange':rgba(249, 238, 243, 1),
+    'very-soft-green':rgba(243, 247, 217, 1),
+    'yellow':rgba(249, 255, 246, 1)
+);
+
 
 *{
     margin:0;
