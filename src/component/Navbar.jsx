@@ -6,7 +6,7 @@ import logoNavbar from '../assets/images/logo-navbar.png'
 
 const Navbar = ()=>{
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container container-navbar" >
      <a className="navbar-brand p-0" href="#">
       <img src={logoNavbar} alt="Logo"  className="logo-nav"/>
