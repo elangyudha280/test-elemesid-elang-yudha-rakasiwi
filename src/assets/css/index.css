@@ -224,6 +224,11 @@
   color: rgb(201, 201, 201);
 }
 
+.trending {
+  border: 1px solid red;
+  position: relative;
+}
+
 @media screen and (max-width: 1000px) {
   .container-jumbotron {
     grid-template-columns: 1fr;

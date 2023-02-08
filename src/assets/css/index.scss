@@ -317,6 +317,14 @@ $text-color:(
 }
 }
 
+// END FOR CSS JUMBOTRON
+// -----------------------------------------
+// CSS FOR TRENDING
+.trending{
+    border: 1px solid red;
+    position: relative;
+}
+
 
 // media for < 1000px
 @media screen and (max-width:1000px) {
