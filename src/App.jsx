@@ -15,6 +15,7 @@ import Footer from "./component/footer"
 
 // import component footer copy right
 import FooterCopyRight from "./component/footerCopyRight"
+import FooterMobile from "./component/footerMobile"
 
 
 
@@ -38,6 +39,9 @@ function App() {
 
         {/* component footer copy right */}
         <FooterCopyRight/>
+
+        {/* footer Mobile */}
+        <FooterMobile/>
     </div>
   )
 }

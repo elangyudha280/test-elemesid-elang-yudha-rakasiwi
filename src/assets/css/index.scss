@@ -670,6 +670,16 @@ $text-color:(
     display: grid;
     place-items: center;
 }
+
+
+// footer mobile 
+.footer-mobile{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+
 // media for < 1000px
 @media screen and (max-width:1000px) {
 
@@ -738,19 +748,50 @@ $text-color:(
     }
 
     .btn-all-receipt{
-        margin-bottom: 3em;
+        margin-bottom: 160px;
     }
 
     // footer 768px
     .footer{
         display: none;
     }
+
+    // footer copyright < 768px
+    .copy-right{
+        display: none;
+    }
+
+
+    // footer mobile < 768px
+
+    // footer mobile 
+.footer-mobile{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em 1.5em;
+
+    // nav footer mobile
+    .nav-footer-mobile{
+        cursor: pointer;
+        display: flex;
+        gap: 0.1em;
+        flex-direction: column;
+        color: map-get($text-color, 'gray' );
+        i{
+            font-size: 1.9em;
+            text-align: center;
+        }
+    }
+}
 }
 
 @media screen  and (max-width:550px){
     
     .container-card-trending{
         grid-template-columns: 1fr ;
+        margin-bottom: 180px;
     }
 
     .container-btn-all-receipt{
