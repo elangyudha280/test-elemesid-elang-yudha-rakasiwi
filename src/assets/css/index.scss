@@ -472,7 +472,6 @@ $text-color:(
     position: relative;
     margin-top: 140px;
     height: 330px;
-    margin-bottom: 100px;
     border-radius: 20px;
     background: rgba(249, 255, 246, 1);
     padding: 2em;
@@ -662,6 +661,15 @@ $text-color:(
 
 }
 
+
+// footer copyright
+.copy-right{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
 // media for < 1000px
 @media screen and (max-width:1000px) {
 
@@ -724,6 +732,13 @@ $text-color:(
 
     .container-card-trending{
         grid-template-columns: 1fr 1fr;
+    }
+    .card-item{
+        margin-bottom: 3em;
+    }
+
+    .btn-all-receipt{
+        margin-bottom: 3em;
     }
 
     // footer 768px

@@ -9,7 +9,12 @@ import Jumbotron from "./component/jumbotron"
 
 // import component trending
 import Trending from "./component/Trending"
+
+// import component footer
 import Footer from "./component/footer"
+
+// import component footer copy right
+import FooterCopyRight from "./component/footerCopyRight"
 
 
 
@@ -30,6 +35,9 @@ function App() {
 
         {/* component footer */}
         <Footer/>
+
+        {/* component footer copy right */}
+        <FooterCopyRight/>
     </div>
   )
 }
