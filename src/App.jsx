@@ -9,6 +9,7 @@ import Jumbotron from "./component/jumbotron"
 
 // import component trending
 import Trending from "./component/Trending"
+import Footer from "./component/footer"
 
 
 
@@ -26,6 +27,9 @@ function App() {
 
         {/* component trending */}
         <Trending/>
+
+        {/* component footer */}
+        <Footer/>
     </div>
   )
 }
