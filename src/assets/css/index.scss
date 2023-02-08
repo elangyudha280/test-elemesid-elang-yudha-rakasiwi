@@ -4,7 +4,7 @@
 $font:'Rubik', sans-serif;
 $sky-blue:rgba(64, 162, 177, 1);
 $very-soft-green:rgba(164, 180, 65, 1);
-
+$icon-stars:rgba(255, 132, 18, 1);
 $soft:(
     'green':rgba(139, 172, 62, 1),
     'blue':rgba(64, 94, 182, 1),
@@ -19,9 +19,23 @@ $alpha:(
     'very-soft-green':rgba(243, 247, 217, 1),
     'yellow':rgba(249, 255, 246, 1)
 );
+$text-color:(
+    'coklat':rgba(51, 51, 51, 1),
+    'gray':rgba(117, 117, 117, 1)
+);
+
+
+// mixin rounded button
+@mixin button_rounded(){
+    border-radius: 1.5em;
+    padding: 0.6em 1em;
+     font-size: 0.9em;
+}
+
+
 
 // Css Reset
-$text-color:rgba(51, 51, 51, 1);
+
 *{
     margin:0;
     padding: 0;
@@ -37,18 +51,18 @@ $text-color:rgba(51, 51, 51, 1);
     font-family: $font;
 }
 
+
 // For App class
 .App{
     position: relative;
     width: 100%;
     height: 100vh;
-    border: 1px solid red;
 }
 
 
 // Code For Navbar
 .navbar{
-    padding: 0.9em 0.5em;
+    padding: 1.3em 0.5em;
     z-index: 10;
 }
 
@@ -91,8 +105,6 @@ $text-color:rgba(51, 51, 51, 1);
 }
 
 
-
-
 // button navbar
 .button-navbar{
     position: relative;
@@ -100,16 +112,15 @@ $text-color:rgba(51, 51, 51, 1);
     display: flex;
     justify-content: center;
 
-    // button item
+    // button nav
     .btn{
-        border-radius: 1.5em;
-        padding: 0.6em 1em;
-        font-size: 0.9em;
+        @include button_rounded();
     }
+   
 
     // button login || masuk
     .btn-login{
-        color: $text-color;
+        color: map-get($text-color, 'coklat' );
         font-weight: 600;
 
     }
@@ -121,7 +132,213 @@ $text-color:rgba(51, 51, 51, 1);
     }
 }
 
+// end for code css navbar
 
+// code css untuk jumbotron
+.jumbotron{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+
+    // jumbotron bg
+    .jumbotron-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        opacity: 0.03;
+    }
+}
+
+// css untuk container jumbotron
+.container-jumbotron{
+    display: grid;
+    z-index: 2;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 180px auto;
+    grid-template-areas: 'title image'
+                         'description image';
+}
+
+// css untuk Title Jumbotron
+.title-jumbotron{
+    grid-area: title;
+    z-index: 5;
+    font-size: 3.5em;
+    align-self: end;
+    color: map-get($soft, 'green');
+}
+
+// css untuk  description jumbotron
+.description-jumbotron{
+    padding: 1em 0;
+    grid-area: description;
+    z-index: 5;
+
+    // paragraph-description
+    .paragraph-description{
+        color: map-get($text-color, 'gray' );
+        font-weight: 500;
+    }
+
+    // container button description
+    .button-jumbotron{
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 1em;
+        margin-top: 1.5em;
+    }
+
+     // button description
+     .btn{
+        @include button_rounded();
+     }
+
+    //  button daftar context jumbotron
+     .btn-daftar-jumbotron{
+        color: #fff;
+        background: map-get($soft, 'green' );
+        box-shadow: 0 1em 1em map-get($alpha ,'sky-blue');
+    }
+
+    // button about us jumbotron
+    .btn-about-us-jumbotron{
+        background: rgb(242, 242, 242);
+        font-weight: 600;
+    }
+     
+
+}
+
+
+// code for jumbotron images
+.jumbotron-img{
+    z-index: 5;
+    grid-area: image;
+    position: relative;
+    width: 100%;
+    display: grid;
+    justify-items: end;
+    align-items: center;
+   
+   // img food 
+   .img-food{
+    position: relative;
+    width: 450px;
+    height:450px;
+    user-select: none;
+    display: grid;
+    place-items: center;
+    background: url('../images/plate-jumbotron.png') no-repeat center ;
+    background-size: cover;
+
+        img{
+            width: 85%;
+            height: 85%;
+            object-position: center;
+        }
+        
+   }
+
+   
+// card food jumboton
+.card-food-jumbotron{
+    position: absolute;
+    bottom: 1%;
+    right: 30%;
+    padding: 1em 0.7em;
+    width: 285px;
+    height: 85px;
+    display: flex; 
+    align-items: center;
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0px 11px 39px rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(5.5px);
+    border-radius: 17px;
+    gap: 0.5em;
+
+    // img food jumbotron
+    .img-food-jumbotron{
+        width: 53px;
+        height: 100%;
+    }
+
+    // description-card-food-jumbotron
+    .description-card-food-jumbotron{
+        height: 100%;
+        flex: 1;
+
+        // title card food
+        .title-card-food{
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        // sub title card food
+        .sub-title-card-food{
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+            color: map-get($text-color, 'gray' );
+        }
+
+        // stars card food
+        .stars-food-card{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.1em;
+
+            i{
+                font-size: 0.6em;
+                margin-top: 0.4em;
+                color: $icon-stars;
+            }
+            i:last-child{
+                color: rgb(201,201,201);
+            }
+        }
+    }
+}
+}
+
+
+// media for < 1000px
+@media screen and (max-width:1000px) {
+
+    // container jumbotron for media < 1000px
+    .container-jumbotron{
+        grid-template-columns:  1fr;
+        grid-template-rows: 180px auto auto;
+        grid-template-areas: 'title'
+                             'description'
+                             'image';
+    }
+
+    // jumbotron img < 1000px
+    .jumbotron-img{
+        justify-items: center;
+
+        .card-food-jumbotron{
+            left: 10%;
+        }
+    }
+}
 
 // media for < 768px
 @media screen and (max-width:768px){
@@ -133,7 +350,7 @@ $text-color:rgba(51, 51, 51, 1);
 
     // button navbar < 768px
     .button-navbar{
-        // button login || masuk
+        // button login || masuk < 768px
         .btn-login{
             display: none;
         }
@@ -141,7 +358,57 @@ $text-color:rgba(51, 51, 51, 1);
 
 }
 
+// media for < 500px
+@media screen and (max-width:500px){
+    
+    // container jumbotron media 500px
+    .container-jumbotron{
+        grid-template-columns:  1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1.5em;
+        padding: 0 1.4em;
+        grid-template-areas: 'title'
+                             'image'
+                             'description'; 
+        
+        // title jumbotron media < 500px
+        .title-jumbotron{
+            font-size: 2.5em;
+        }
 
+        // description jumbotron  < 500px
+        .description-jumbotron{
+           font-size: 0.9em;
+        }
+
+        // jumbotron img < 500px
+        .jumbotron-img{
+            justify-items: left;
+           
+           // img food 
+           .img-food{
+            width: 170px;
+            height:170px;
+            place-items: left;
+        
+                img{
+                    width: 90%;
+                    height: 90%;
+                    object-position: center;
+                }
+           }
+        
+        }                 
+
+        // card-food-jumbotron
+        .card-food-jumbotron{
+            position: absolute;
+            bottom: -15%;
+            left: 18%;
+           }                      
+    }
+
+}
 
 // media for < 400px
 @media screen and (max-width:400px){
@@ -159,6 +426,17 @@ $text-color:rgba(51, 51, 51, 1);
             display: none;
         }
     }
+ 
+    // container jumbotron < 400px
+    .container-jumbotron{
+
+        .card-food-jumbotron{
+            position: absolute;
+            bottom: -15%;
+            left: 0;
+            width: 100%;
+           } 
+    }
 
 }
 
@@ -171,5 +449,12 @@ $text-color:rgba(51, 51, 51, 1);
      .logo-nav{
         width: 110px;
      }
+    }
+
+    
+    .container-jumbotron{
+        .title-jumbotron{
+            font-size: 2.2em;
+        }
     }
 }

@@ -17,11 +17,10 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  border: 1px solid red;
 }
 
 .navbar {
-  padding: 0.9em 0.5em;
+  padding: 1.3em 0.5em;
   z-index: 10;
 }
 
@@ -75,12 +74,209 @@
   background: rgb(139, 172, 62);
 }
 
+.jumbotron {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.jumbotron .jumbotron-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0.03;
+}
+
+.container-jumbotron {
+  display: grid;
+  z-index: 2;
+  grid-template-columns: 0.8fr 1fr;
+  grid-template-rows: 180px auto;
+  grid-template-areas: "title image" "description image";
+}
+
+.title-jumbotron {
+  grid-area: title;
+  z-index: 5;
+  font-size: 3.5em;
+  align-self: end;
+  color: rgb(139, 172, 62);
+}
+
+.description-jumbotron {
+  padding: 1em 0;
+  grid-area: description;
+  z-index: 5;
+}
+.description-jumbotron .paragraph-description {
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+}
+.description-jumbotron .button-jumbotron {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+.description-jumbotron .btn {
+  border-radius: 1.5em;
+  padding: 0.6em 1em;
+  font-size: 0.9em;
+}
+.description-jumbotron .btn-daftar-jumbotron {
+  color: #fff;
+  background: rgb(139, 172, 62);
+  box-shadow: 0 1em 1em rgb(230, 243, 245);
+}
+.description-jumbotron .btn-about-us-jumbotron {
+  background: rgb(242, 242, 242);
+  font-weight: 600;
+}
+
+.jumbotron-img {
+  z-index: 5;
+  grid-area: image;
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-items: end;
+  align-items: center;
+}
+.jumbotron-img .img-food {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: grid;
+  place-items: center;
+  background: url("../images/plate-jumbotron.png") no-repeat center;
+  background-size: cover;
+}
+.jumbotron-img .img-food img {
+  width: 85%;
+  height: 85%;
+  -o-object-position: center;
+     object-position: center;
+}
+.jumbotron-img .card-food-jumbotron {
+  position: absolute;
+  bottom: 1%;
+  right: 30%;
+  padding: 1em 0.7em;
+  width: 285px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0px 11px 39px rgba(0, 0, 0, 0.07);
+  -webkit-backdrop-filter: blur(5.5px);
+          backdrop-filter: blur(5.5px);
+  border-radius: 17px;
+  gap: 0.5em;
+}
+.jumbotron-img .card-food-jumbotron .img-food-jumbotron {
+  width: 53px;
+  height: 100%;
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron {
+  height: 100%;
+  flex: 1;
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron .title-card-food {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron .sub-title-card-food {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  color: rgb(117, 117, 117);
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron .stars-food-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron .stars-food-card i {
+  font-size: 0.6em;
+  margin-top: 0.4em;
+  color: rgb(255, 132, 18);
+}
+.jumbotron-img .card-food-jumbotron .description-card-food-jumbotron .stars-food-card i:last-child {
+  color: rgb(201, 201, 201);
+}
+
+@media screen and (max-width: 1000px) {
+  .container-jumbotron {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto auto;
+    grid-template-areas: "title" "description" "image";
+  }
+  .jumbotron-img {
+    justify-items: center;
+  }
+  .jumbotron-img .card-food-jumbotron {
+    left: 10%;
+  }
+}
 @media screen and (max-width: 768px) {
   .navbar {
     border-bottom: 1px solid rgba(222, 222, 222, 0.5);
   }
   .button-navbar .btn-login {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container-jumbotron {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5em;
+    padding: 0 1.4em;
+    grid-template-areas: "title" "image" "description";
+  }
+  .container-jumbotron .title-jumbotron {
+    font-size: 2.5em;
+  }
+  .container-jumbotron .description-jumbotron {
+    font-size: 0.9em;
+  }
+  .container-jumbotron .jumbotron-img {
+    justify-items: left;
+  }
+  .container-jumbotron .jumbotron-img .img-food {
+    width: 170px;
+    height: 170px;
+    place-items: left;
+  }
+  .container-jumbotron .jumbotron-img .img-food img {
+    width: 90%;
+    height: 90%;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .container-jumbotron .card-food-jumbotron {
+    position: absolute;
+    bottom: -15%;
+    left: 18%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -93,9 +289,18 @@
   .button-navbar .btn-login {
     display: none;
   }
+  .container-jumbotron .card-food-jumbotron {
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 345px) {
   .navbar-brand .logo-nav {
     width: 110px;
+  }
+  .container-jumbotron .title-jumbotron {
+    font-size: 2.2em;
   }
 }/*# sourceMappingURL=index.css.map */
