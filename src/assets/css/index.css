@@ -16,7 +16,7 @@
 .App {
   position: relative;
   width: 100%;
-  height: 500vh;
+  height: auto;
   overflow-x: hidden;
 }
 
@@ -250,8 +250,27 @@
   border-radius: 17px;
   padding: 1.5em 1.2em;
   text-transform: capitalize;
+  position: relative;
+}
+.card-item:hover .card-item-bg {
+  opacity: 0.1;
+}
+.card-item .card-item-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
 }
 .card-item .img-card-item {
+  z-index: 3;
   width: 100px;
   height: 100px;
   overflow: hidden;
@@ -270,11 +289,13 @@
      object-position: center;
 }
 .card-item .title-card-item {
+  z-index: 3;
   margin-top: 0.8em;
   font-size: 1.5em;
 }
 .card-item .sub-title-card-item {
   margin: 0;
+  z-index: 3;
   padding: 0;
   margin-top: -0.2em;
   margin-bottom: 1em;
@@ -336,6 +357,166 @@
   color: rgb(201, 201, 201);
 }
 
+.footer {
+  position: relative;
+  margin-top: 140px;
+  height: 330px;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  background: rgb(249, 255, 246);
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr auto auto 0.7fr;
+  grid-auto-rows: auto;
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+}
+.contact .address {
+  margin-top: 1.7em;
+  max-width: 380px;
+  font-size: 0.8em;
+  color: rgb(117, 117, 117);
+}
+.contact .social-media {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 2em;
+}
+.contact .social-media a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.7em;
+  color: rgb(164, 180, 65);
+  font-size: 0.8em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5;
+}
+.contact .social-media a i {
+  transition: 0.5s;
+}
+.contact .social-media a:hover {
+  background: rgb(164, 180, 65);
+  color: #fff;
+}
+
+.categories {
+  position: relative;
+  height: 100%;
+  width: 180px;
+  padding: 0 0.5em;
+}
+.categories .title-categories {
+  margin: 0;
+  font-size: 18px;
+  margin: 0.7em 0 0.5em;
+}
+.categories .nav-categories {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.categories .nav-categories li {
+  padding: 0.3em 0;
+}
+.categories .nav-categories a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+}
+
+.about-us {
+  position: relative;
+  height: 100%;
+  width: 180px;
+  padding: 0 0.5em;
+}
+.about-us .title-about-us {
+  margin: 0;
+  font-size: 18px;
+  margin: 0.7em 0 0.5em;
+}
+.about-us .nav-about-us {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.about-us .nav-about-us li {
+  padding: 0.3em 0;
+}
+.about-us .nav-about-us a {
+  color: rgb(117, 117, 117);
+  text-decoration: none;
+}
+
+.newsletter {
+  padding: 0 0.2em;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.newsletter .title-newsletter {
+  margin: 0;
+  font-size: 18px;
+  margin: 0.7em 0 0.5em;
+}
+.newsletter .letter-discount {
+  color: rgb(117, 117, 117);
+}
+.newsletter .input-email {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.6em;
+  display: flex;
+  justify-content: left;
+  border: 1px solid #000;
+}
+.newsletter .input-email input {
+  flex: 1;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.4em 0.7em;
+  color: #000;
+}
+.newsletter .input-email input::-moz-placeholder {
+  color: #000;
+}
+.newsletter .input-email input:-ms-input-placeholder {
+  color: #000;
+}
+.newsletter .input-email input::placeholder {
+  color: #000;
+}
+.newsletter .input-email .btn-submit-email {
+  border: none;
+  outline: none;
+  padding: 0 1em;
+  background-color: rgb(164, 180, 65);
+  color: #fff;
+}
+.newsletter .btn-email, .newsletter .btn-notelphone {
+  margin-top: 0.5em;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.2em 0;
+  gap: 0.2em;
+  font-size: 0.9em;
+}
+.newsletter .btn-email i, .newsletter .btn-notelphone i {
+  margin: 0 0.3em;
+  color: rgb(117, 117, 117);
+}
+
 @media screen and (max-width: 1000px) {
   .container-jumbotron {
     grid-template-columns: 1fr;
@@ -352,6 +533,18 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
   }
+  .footer {
+    height: auto;
+    gap: 0.7em;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .categories, .about-us {
+    width: 100%;
+  }
+  .newsletter {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar {
@@ -362,6 +555,9 @@
   }
   .container-card-trending {
     grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    display: none;
   }
 }
 @media screen and (max-width: 550px) {

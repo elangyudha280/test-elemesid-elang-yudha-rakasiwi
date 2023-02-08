@@ -40,6 +40,7 @@ const CardItemTrending = ({imgCard,titleCard,SubTitle,dataIconStars=0})=>{
 
     return(
         <div className="card-item" data-food={SubTitle}>
+                    <div className="card-item-bg"></div>
                     <div className="img-card-item" >
                      <img src={imgCard} alt={titleCard} className="iimg-card-trending"  />
                     </div>

@@ -56,7 +56,7 @@ $text-color:(
 .App{
     position: relative;
     width: 100%;
-    height: 500vh;
+    height: auto;
     overflow-x: hidden;
 }
 
@@ -353,9 +353,31 @@ $text-color:(
         border-radius: 17px;
         padding: 1.5em 1.2em;
         text-transform: capitalize;
+        position: relative;
+        &:hover .card-item-bg{
+            opacity: 0.1;
+        }
+
+        // card item bg
+            .card-item-bg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/background.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 1;
+                opacity: 0;
+                transition: 0.3s;
+            }        
+
 
         // img card item
         .img-card-item{
+            z-index: 3;
             width: 100px;
             height: 100px;
             overflow: hidden;
@@ -367,11 +389,13 @@ $text-color:(
                 user-select: none;
                 object-fit: cover;
                 object-position: center;
+                
             }
         }
 
         // title card item
         .title-card-item{
+            z-index: 3;
             margin-top: 0.8em;
             font-size: 1.5em;
         } 
@@ -379,6 +403,7 @@ $text-color:(
         // sub title card item
         .sub-title-card-item{
             margin: 0;
+            z-index: 3;
             padding: 0;
             margin-top: -0.2em;
             margin-bottom: 1em;
@@ -439,6 +464,203 @@ $text-color:(
     }
 }
 
+// END CSS FOR TRENDING
+// ------------------------------------------------
+// Code css untuk footer
+
+.footer{
+    position: relative;
+    margin-top: 140px;
+    height: 330px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    background: rgba(249, 255, 246, 1);
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr auto auto 0.7fr;
+    grid-auto-rows: auto;
+}
+
+// footer contact
+.contact{
+    width: 100%;
+    height: 100%;
+
+    // address contact
+    .address{
+        margin-top: 1.7em;
+        max-width: 380px;
+        font-size: 0.8em;
+        color: map-get($text-color, 'gray' );
+    }
+
+    // social media
+    .social-media{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 2em;
+
+        a{
+            color: inherit;
+            text-decoration: none;
+            padding:  0.7em;
+            color: $very-soft-green;
+            font-size: 0.8em;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.5;
+
+            i{
+                transition: 0.5s;
+            }
+        }
+
+        a:hover{
+            background: $very-soft-green;
+            color: #fff;
+        }
+    }
+}
+
+// footer categories
+.categories{
+    position: relative;
+    height: 100%;
+    width: 180px;
+    padding: 0 0.5em;
+
+    // title categories
+    .title-categories{
+        margin: 0;
+        font-size: 18px;
+        margin: 0.7em 0 0.5em;
+    }
+
+    // nav categories
+    .nav-categories{
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 0.3em 0 ;
+        }
+
+        a{
+            color: map-get($text-color, 'gray' );
+            text-decoration: none;
+        }
+        
+    }
+}
+
+// footer about-us
+.about-us{
+    position: relative;
+    height: 100%;
+    width: 180px;
+    padding: 0 0.5em;
+
+    // title about-us
+    .title-about-us{
+        margin: 0;
+        font-size: 18px;
+        margin: 0.7em 0 0.5em;
+    }
+
+    // nav categories
+    .nav-about-us{
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 0.3em 0 ;
+        }
+
+        a{
+            color: map-get($text-color, 'gray' );
+            text-decoration: none;
+        }
+        
+    }
+}
+
+// footer newsletter
+
+.newsletter{
+    padding: 0 0.2em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    // title about-us
+    .title-newsletter{
+        margin: 0;
+        font-size: 18px;
+        margin: 0.7em 0 0.5em;
+    }
+
+    // letter discount
+    .letter-discount{
+        color: map-get($text-color,'gray' );
+    }
+
+    // input group 
+    .input-email{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.6em;
+        display: flex;
+        justify-content: left;
+        border: 1px solid #000;
+    
+        // input email
+        input{
+            flex: 1;
+            outline: none;
+            border: none;
+            width: 100%;
+            padding: 0.4em 0.7em;
+            color: #000;
+
+            &::placeholder{
+                color: #000; 
+            }
+        
+        }
+
+        // btn submit email
+        .btn-submit-email{
+            border: none;
+            outline: none;
+            padding: 0 1em;
+            background-color: $very-soft-green;
+            color: #fff;
+        }
+
+    }
+
+    // button email
+      .btn-email , .btn-notelphone{
+        margin-top: 0.5em;
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0.2em 0;
+        gap: 0.2em;
+        font-size: 0.9em;
+        i{
+            margin: 0 0.3em;
+            color:map-get($text-color, 'gray' )
+        }
+    }
+
+}
 
 // media for < 1000px
 @media screen and (max-width:1000px) {
@@ -465,6 +687,23 @@ $text-color:(
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
     }
+
+
+    // footer < 1000px
+    .footer{    
+        height: auto;
+        gap: 0.7em;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    .categories,.about-us{
+        width: 100%;
+    }
+
+    .newsletter{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
 
 // media for < 768px
@@ -487,6 +726,10 @@ $text-color:(
         grid-template-columns: 1fr 1fr;
     }
 
+    // footer 768px
+    .footer{
+        display: none;
+    }
 }
 
 @media screen  and (max-width:550px){
