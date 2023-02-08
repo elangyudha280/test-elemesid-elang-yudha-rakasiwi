@@ -56,7 +56,7 @@ $text-color:(
 .App{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 500vh;
 }
 
 
@@ -323,7 +323,23 @@ $text-color:(
 .trending{
     border: 1px solid red;
     position: relative;
+    margin-top: 100px;
 }
+
+// title trending
+.title-trending{
+    font-size: 2em;
+    margin: 0;
+}
+
+// sub title trending
+.sub-title-trending{
+    font-size: 1.8em;
+    color: $very-soft-green;
+}
+
+
+
 
 
 // media for < 1000px
@@ -414,6 +430,16 @@ $text-color:(
             bottom: -15%;
             left: 18%;
            }                      
+    }
+
+    // title trending < 500px
+    .title-trending{
+        font-size: 1.6em;
+    }
+
+    // sub title trending < 500px
+    .sub-title-trending{
+        font-size: 1.5em;
     }
 
 }

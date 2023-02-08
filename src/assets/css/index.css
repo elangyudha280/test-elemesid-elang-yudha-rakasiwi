@@ -16,7 +16,7 @@
 .App {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 500vh;
 }
 
 .navbar {
@@ -227,6 +227,17 @@
 .trending {
   border: 1px solid red;
   position: relative;
+  margin-top: 100px;
+}
+
+.title-trending {
+  font-size: 2em;
+  margin: 0;
+}
+
+.sub-title-trending {
+  font-size: 1.8em;
+  color: rgb(164, 180, 65);
 }
 
 @media screen and (max-width: 1000px) {
@@ -282,6 +293,12 @@
     position: absolute;
     bottom: -15%;
     left: 18%;
+  }
+  .title-trending {
+    font-size: 1.6em;
+  }
+  .sub-title-trending {
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 400px) {
