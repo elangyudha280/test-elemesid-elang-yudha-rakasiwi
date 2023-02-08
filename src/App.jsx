@@ -15,6 +15,7 @@ import Trending from "./component/Trending"
 // component App
 function App() {
 
+
   return (
     <div className="App">
         {/* component navbar */}

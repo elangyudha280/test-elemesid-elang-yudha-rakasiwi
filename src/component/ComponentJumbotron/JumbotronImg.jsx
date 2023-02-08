@@ -16,12 +16,12 @@ const JumbotronImg = ()=>{
                        <p className="sub-title-card-food">
                            Tomato
                        </p>
-                       <div className="stars-food-card">
-                       <i className="fa-solid fa-star"></i>
-                       <i className="fa-solid fa-star"></i>
-                       <i className="fa-solid fa-star"></i>
-                       <i className="fa-solid fa-star"></i>
-                       <i className="fa-solid fa-star"></i>
+                       <div className="stars-ranting">
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star"></i>
+                                <i className="fa-solid fa-star empty-stars"></i>
                        </div>
                </div>
            </div>
