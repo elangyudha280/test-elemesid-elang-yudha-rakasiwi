@@ -1,6 +1,6 @@
 
 
-# cara mengunduh dan menjalankan program webnya
+# Panduan Mengunduh Dan menjalankan Program Webnya
 
 ## 1.Unduh 
     Unduh folder atau reponya di komputer kalian  
@@ -10,10 +10,19 @@
 * pilih lokasi tempat menyimpan foldernya 
 #### note: bisa disimpan di Drive D atau C
 
-## 3.Instalasi package
+## 3.Instalasi Package
 * setelah folder di extract masuk ke dalam folder
 * buka terminal, bisa menggunakan git Bash atau CMD 
-  ##### note: jika belum menginstal git disarankan untuk menginstal git terlebih dahulu
+#### note: jika belum menginstal git disarankan untuk menginstal git terlebih dahulu
 * ketikan perintah ( npm i ) untuk menginstal semua package yang di butuhkan oleh web atau reactnya
-  ##### jika belum menginstall NPM silahkan install terlebih dahulu
+#### note: jika belum menginstall NPM silahkan install terlebih dahulu
+
+## 4.Menjalankan Program 
+####  jika ingin menjalankan program atau webnya ketikan perintah di npm run dev di terminal
+    
+#### Contoh
+```
+    npm run dev
+```
+
          
