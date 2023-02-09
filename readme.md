@@ -1,6 +1,9 @@
 # Demo
 https://test-elemesid-elang-yudha-rakasiwi.vercel.app/
 
+# stack technology 
+#### ( ReactJs,Bootstrap,SCSS,SwipperJs )
+
 # Panduan Mengunduh Dan Menjalankan Program Webnya
 
 ## 1.Unduh 
