@@ -2,8 +2,12 @@
 
 # cara menginstal dan menjalankan program webnya
 
-# 1.download repo atau folder nya di komputer kalian 
-    Note: bisa simpan foldernya di Drive D atau C
+    1.Download 
+    download folder atau reponya di komputer kalian  
 
-# 2. extrak folder
+    2.extract
+    jika sudah mendownload reponya silahkan extract folder atau reponya
+
+    note: bisa disimpan di Drive D atau C
+
     
