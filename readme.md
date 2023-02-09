@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# demo
+# Demo
 https://test-elemesid-elang-yudha-rakasiwi.vercel.app/
 
 # Panduan Mengunduh Dan Menjalankan Program Webnya
