@@ -14,7 +14,11 @@
 * setelah folder di extract masuk ke dalam folder
 * buka terminal, bisa menggunakan git Bash atau CMD 
 #### note: jika belum menginstal git disarankan untuk menginstal git terlebih dahulu
-* ketikan perintah ( npm i ) untuk menginstal semua package yang di butuhkan oleh web atau reactnya
+* ketikan perintah ( npm i atau npm install ) untuk menginstal semua package yang di butuhkan oleh web atau reactnya
+#### Contoh
+```
+npm i || npm install
+```
 #### note: jika belum menginstall NPM silahkan install terlebih dahulu
 
 ## 4.Menjalankan Program 
@@ -22,7 +26,7 @@
     
 #### Contoh
 ```
-    npm run dev
+npm run dev
 ```
 
          
