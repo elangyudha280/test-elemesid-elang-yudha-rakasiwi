@@ -1,9 +1,10 @@
+# demo
+https://test-elemesid-elang-yudha-rakasiwi.vercel.app/
 
-
-# Panduan Mengunduh Dan menjalankan Program Webnya
+# Panduan Mengunduh Dan Menjalankan Program Webnya
 
 ## 1.Unduh 
-    Unduh folder atau reponya di komputer kalian  
+* Unduh folder atau reponya di komputer kalian  
 
 ## 2.Extract
 * pilih foldernya dan klik kanan mouse atau touchpad dan pilih extract files 
