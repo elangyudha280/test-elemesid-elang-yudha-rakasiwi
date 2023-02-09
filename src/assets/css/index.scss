@@ -314,6 +314,33 @@ $text-color:(
 
 // END FOR CSS JUMBOTRON
 // -----------------------------------------
+// Css for category
+
+.category{
+    position: relative;
+    width: 100%;
+    border: 1px solid red;
+    margin-top: 90px;
+    .container{
+        border: 1px solid blue;
+    }
+}
+
+// title category
+.title-category{
+    font-size: 2em;
+    margin: 0;
+}
+
+// sub title category
+.sub-title-category{
+    font-size: 1.9em;
+    color: $very-soft-green;
+}
+
+
+// END FOR CSS CATEGORY
+// -----------------------------------------------
 // CSS FOR TRENDING
 .trending{
     position: relative;
@@ -849,13 +876,13 @@ $text-color:(
            }                      
     }
 
-    // title trending < 500px
-    .title-trending{
+    // title  category and trending   < 500px
+    .title-trending, .title-category{
         font-size: 1.6em;
     }
 
-    // sub title trending < 500px
-    .sub-title-trending{
+    // sub title category and trending < 500px
+    .sub-title-trending,.sub-title-category{
         font-size: 1.5em;
     }
 

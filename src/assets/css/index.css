@@ -218,6 +218,26 @@
   color: rgb(117, 117, 117);
 }
 
+.category {
+  position: relative;
+  width: 100%;
+  border: 1px solid red;
+  margin-top: 90px;
+}
+.category .container {
+  border: 1px solid blue;
+}
+
+.title-category {
+  font-size: 2em;
+  margin: 0;
+}
+
+.sub-title-category {
+  font-size: 1.9em;
+  color: rgb(164, 180, 65);
+}
+
 .trending {
   position: relative;
   margin-top: 100px;
@@ -642,10 +662,10 @@
     bottom: -15%;
     left: 18%;
   }
-  .title-trending {
+  .title-trending, .title-category {
     font-size: 1.6em;
   }
-  .sub-title-trending {
+  .sub-title-trending, .sub-title-category {
     font-size: 1.5em;
   }
 }

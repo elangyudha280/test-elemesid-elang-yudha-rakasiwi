@@ -1,4 +1,4 @@
-import logoElemensId from '../assets/images/logo-navbar.png'
+import logoElemensId from '../../assets/images/logo-navbar.png'
 
 const Footer = ()=>{
     return (

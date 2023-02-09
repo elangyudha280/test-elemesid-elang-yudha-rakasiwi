@@ -7,6 +7,9 @@ import Navbar from "./component/Navbar"
 // import component jumbotron
 import Jumbotron from "./component/jumbotron"
 
+// import component category
+import Category from "./component/Category"
+
 // import component trending
 import Trending from "./component/Trending"
 
@@ -32,6 +35,9 @@ function App() {
         
         {/* component Jumbotron */}
         <Jumbotron/>
+
+        {/* component category */}
+        <Category/>
 
         {/* component trending */}
         <Trending/>
