@@ -11,11 +11,13 @@ import Jumbotron from "./component/jumbotron"
 import Trending from "./component/Trending"
 
 // import component footer
-import Footer from "./component/footer"
+import Footer from "./component/Footer/footer"
 
 // import component footer copy right
-import FooterCopyRight from "./component/footerCopyRight"
-import FooterMobile from "./component/footerMobile"
+import FooterCopyRight from "./component/Footer/footerCopyRight"
+
+// importo component footer for mobile
+import FooterMobile from "./component/Footer/footerMobile"
 
 
 
