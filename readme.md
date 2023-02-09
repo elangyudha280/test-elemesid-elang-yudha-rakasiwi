@@ -6,8 +6,9 @@
     download folder atau reponya di komputer kalian  
 
 ## 2.extract
-  jika sudah mendownload reponya silahkan extract folder atau reponya
-  
-  ### note: bisa disimpan di Drive D atau C
+    * pilih foldernya dan klik kanan mouse atau touchpad dan pilih extract files 
+    * pilih lokasi tempat menyimpan foldernya 
+    
+  #### note: bisa disimpan di Drive D atau C
 
     
