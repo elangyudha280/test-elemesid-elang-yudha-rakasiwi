@@ -51,6 +51,26 @@ $text-color:(
     font-family: $font;
 }
 
+// dataset food css
+[data-food='pizza']{
+    background-color: map-get($alpha, 'sky-blue' );
+}
+[data-food='kebab']{
+    background-color: map-get($alpha, 'blue' );
+}
+[data-food='kebab']{
+    background-color: map-get($alpha, 'blue' );
+}
+[data-food='salmon']{
+    background-color: map-get($alpha, 'yellow' );
+}
+[data-food='doughnut']{
+    background-color: map-get($alpha, 'very-soft-green' );
+}
+[data-food='cupcake']{
+    background-color: map-get($alpha, 'green' );
+}
+
 
 // For App class
 .App{
@@ -319,11 +339,7 @@ $text-color:(
 .category{
     position: relative;
     width: 100%;
-    border: 1px solid red;
     margin-top: 90px;
-    .container{
-        border: 1px solid blue;
-    }
 }
 
 // title category
@@ -338,6 +354,133 @@ $text-color:(
     color: $very-soft-green;
 }
 
+// slider card cateogry
+
+#container-slider{
+    position: relative;
+    right: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  } 
+
+//   card category
+.card-category{
+    position: relative;
+    width: 100%;
+    height: 170px;
+    padding: 1.7em 1em;
+    border-radius: 0.5em;
+    transition: 0.3s;
+
+    // card category bg
+    .card-category-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: url('../images/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &:hover .card-category-bg{
+        opacity: 0.1;
+    }
+    
+ 
+}
+
+
+
+// card header category
+.card-header-category{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    img{
+        width: 50px;
+        height: 52px;
+    }
+
+}
+
+// card body category
+.card-body-category{
+    position: relative;
+    width: 100%;
+    margin-top: 1.4em;
+    text-transform: capitalize;    
+    // title card category
+    .title-card-category{
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+    }
+    .total-item-category{
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+// 
+
+// button card nav slider
+
+ 
+.button-slider-category{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    margin-top: 1em;
+    gap: 0.8em;
+
+    button{
+
+        padding: 0 0.3em;
+        border-radius:1.8em;
+        display: flex;
+        width: 100px;
+        border:none;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        align-items: center;
+        background:$very-soft-green;
+
+    }
+
+    .circle-slide{
+        width: 28px;
+        height: 28px;
+        background: #fff;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    p{
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        margin-top: 0.2em;
+    }
+
+}
 
 // END FOR CSS CATEGORY
 // -----------------------------------------------
@@ -381,6 +524,7 @@ $text-color:(
         padding: 1.5em 1.2em;
         text-transform: capitalize;
         position: relative;
+
         &:hover .card-item-bg{
             opacity: 0.1;
         }
@@ -439,24 +583,6 @@ $text-color:(
         }
     }
 
-    .card-item[data-food='pizza']{
-        background-color: map-get($alpha, 'sky-blue' );
-    }
-    .card-item[data-food='kebab']{
-        background-color: map-get($alpha, 'blue' );
-    }
-    .card-item[data-food='kebab']{
-        background-color: map-get($alpha, 'blue' );
-    }
-    .card-item[data-food='salmon']{
-        background-color: map-get($alpha, 'yellow' );
-    }
-    .card-item[data-food='doughnut']{
-        background-color: map-get($alpha, 'very-soft-green' );
-    }
-    .card-item[data-food='cupcake']{
-        background-color: map-get($alpha, 'green' );
-    }
 
 
     // container-btn-all-receipt
@@ -728,6 +854,12 @@ $text-color:(
         }
     }
 
+
+
+    // container slider category < 1000px
+   
+
+
     .container-card-trending{
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
@@ -767,10 +899,12 @@ $text-color:(
         }
     }
 
+    .button-slider-category{
+       display: none;
+    }    
+
     .container-card-trending{
         grid-template-columns: 1fr 1fr;
-    }
-    .card-item{
         margin-bottom: 3em;
     }
 
@@ -819,6 +953,7 @@ $text-color:(
     .container-card-trending{
         grid-template-columns: 1fr ;
         margin-bottom: 180px;
+    
     }
 
     .container-btn-all-receipt{
